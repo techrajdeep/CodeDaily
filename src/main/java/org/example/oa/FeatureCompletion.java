@@ -27,14 +27,13 @@ public class FeatureCompletion {
         int maxDevTime = 0;
         int maxIntTime = 0;
         List<Feature> features = new ArrayList<>();
-        for (int i = 0; i < devTime.length; i++)
-            features.add(new Feature(devTime[i],intTime[i]));
+        for (int i = 0; i < devTime.length; i++) features.add(new Feature(devTime[i],intTime[i]));
         features.sort((f1, f2) -> Integer.compare(f2.devTime, f1.devTime));
         for (Feature feature : features) {
-            if(Math.max(maxDevTime,feature.devTime) <= maxIntTime+feature.intTime)
-                maxDevTime=Math.max(maxDevTime,feature.devTime);
-            else
-                maxIntTime=maxIntTime+feature.intTime;
+            int newDevTime = Math.max(maxDevTime, feature.devTime);
+            int newIntTime = maxIntTime + feature.intTime;
+            if(newDevTime <= newIntTime) maxDevTime=newDevTime;
+            else maxIntTime=newIntTime;
         }
         return Math.max(maxDevTime,maxIntTime);
     }

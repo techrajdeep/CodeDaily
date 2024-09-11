@@ -1,1 +1,2 @@
-# daily code problems , DSA notes 
+# Welcome to Daily problems solving
+## Use unit test case for evaluation 
