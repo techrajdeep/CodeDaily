@@ -1,0 +1,62 @@
+{
+  "TransferPaymentRequest": {
+    "SubHeader": {
+      "requestUUID": "97f6b07e-b82d-4fed-9c57-80088ba23e30",
+      "serviceRequestId": "NB.GEN.JYUT",
+      "serviceRequestVersion": "1.0",
+      "channelId": "TXBAPI"
+    },
+    "TransferPaymentRequestBody": {
+      "channelId": "TXBAPI",
+      "corpCode": "DEMOCOPRDT44",
+      "paymentDetails": [
+        {
+          "txnPaymode": "NE",
+          "custUniqRef": "338200641748800",
+          "txnType": "abcd",
+          "txnAmount": "8000",
+          "corpAccNum": "******910169",
+          "valueDate": "2020-04-09T00:00:00.000Z",
+          "beneName": "RANCO",
+          "beneCode": "RAI17645",
+          "beneAccNum": "*********977038",
+          "beneAcType": "xyz",
+          "beneAddr1": "SWAPNLOK",
+          "beneAddr2": "BUILDING NO.12",
+          "beneAddr3": "NARKAR ROAD",
+          "beneCity": "MUMBAI",
+          "beneState": "MAHARASHTRA",
+          "benePincode": "765845",
+          "beneIfscCode": "string",
+          "beneBankName": "string",
+          "baseCode": "459488",
+          "chequeNumber": "182529",
+          "chequeDate": "2020-08-09T00:00:00.000Z",
+          "payableLocation": "VADODARA",
+          "printLocation": "VADODARA",
+          "beneEmailAddr1": "******@*****langes.com",
+          "beneMobileNo": "*****99999",
+          "productCode": "string",
+          "invoiceDetails": [
+            {
+              "invoiceAmount": "1888.00",
+              "invoiceNumber": "M713-DN",
+              "invoiceDate": "2018-11-21T00:00:00.000Z",
+              "cashDiscount": "0.00",
+              "tax": "0.00",
+              "netAmount": "0.00"
+            }
+          ],
+          "enrichment1": "string",
+          "enrichment2": "string",
+          "enrichment3": "string",
+          "enrichment4": "string",
+          "enrichment5": "string",
+          "senderToReceiverInfo": "string",
+          "beneLEI": "12dfkj"
+        }
+      ],
+      "checksum": "20f9015d0bf33b07dffd992e33203a"
+    }
+  }
+}
