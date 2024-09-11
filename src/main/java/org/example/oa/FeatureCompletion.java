@@ -15,14 +15,22 @@ public class FeatureCompletion {
      1. int[] devTime={3,4,5,9}; int[] intTime={3,2,5,5}; Answer : 5
      2. int[] devTime={1,5,7,2}; int[] intTime={1,1,3,3}; Answer : 4
      */
+    public class Feature{
+        public int devTime;
+        public int intTime;
+        public Feature(int devTime, int intTime){
+            this.devTime = devTime;
+            this.intTime = intTime;
+        }
+    }
     public int findMinFeatureCompletionTime(int[] devTime, int[] intTime) {
         int maxDevTime = 0;
         int maxIntTime = 0;
-        List<Main.Feature> features = new ArrayList<>();
+        List<Feature> features = new ArrayList<>();
         for (int i = 0; i < devTime.length; i++)
-            features.add(new Main.Feature(devTime[i],intTime[i]));
+            features.add(new Feature(devTime[i],intTime[i]));
         features.sort((f1, f2) -> Integer.compare(f2.devTime, f1.devTime));
-        for (Main.Feature feature : features) {
+        for (Feature feature : features) {
             if(Math.max(maxDevTime,feature.devTime) <= maxIntTime+feature.intTime)
                 maxDevTime=Math.max(maxDevTime,feature.devTime);
             else
